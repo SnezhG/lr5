@@ -1,3 +1,5 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿using lr5;
 
-Console.WriteLine("Hello, World!");
+var result = RomanConverter.GetRomanNumber(45);
+Console.WriteLine($"Input {45} Output {result}");
+Console.WriteLine();
