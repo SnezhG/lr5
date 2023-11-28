@@ -26,7 +26,13 @@ public class RomanConverter
 
     public static string GetRomanNumber(int number)
     {
-        return RomanNumbers[number];
+        if (number < 10 || number % 10 == 0)
+            return RomanNumbers[number];
+
+        int tens = number / 10 * 10;
+        int digits = number % 10;
+
+        return RomanNumbers[tens] + RomanNumbers[digits];
     }
 
 }
